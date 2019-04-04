@@ -1,0 +1,250 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    /*makes all elements inherit from their parents*/
+}
+
+body{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    width: 80%;
+    margin: 0 auto 0 auto;
+    background-color: whitesmoke;
+}
+
+a{
+    text-decoration: none;
+}
+
+main{
+    min-height: 100vh;
+    background-color: white;
+    position: relative;
+}
+
+.header{
+    height: 53vh;
+    background-color: whitesmoke;
+    background-image: linear-gradient(to right bottom, rgba(21, 137, 204, 0.8), rgba(167, 174, 243, 0.8)), url(../img/accounting-alone-analysis-938963.jpg);
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.header-text{
+    position: absolute;
+    top: 50%; /*relative to parent*/
+    left: 50%;
+    transform: translate(-50%, -50%); /* relative to self, moves element to center*/
+    text-align: center;
+    color: white;
+}
+
+.heading-primary {
+    color: white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1.3rem;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1rem;
+
+    animation: moveInRight 2s ease-in;
+}
+
+.navbar{
+    height: 4rem;
+    width: 100%;
+    background-color: white;
+    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 52%, 60% 52%, 50% 100%, 0 100%, 0 0);
+    clip-path: polygon(50% 0%, 100% 0, 100% 52%, 60% 52%, 50% 100%, 0 100%, 0 0);
+    position: relative;
+}
+
+.logo-box {
+    position: relative;
+    width: 49%;
+    height: 100%;
+}
+
+.logo {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.nav-box{
+    position: absolute;
+    top: 0rem;
+    right: 0;
+    padding-top: .3rem;
+}
+
+.nav-button{
+    display: inline;
+    padding: 1rem .5rem 1rem .5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgba(21, 137, 204, 0.8);
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: .9rem;
+}
+
+.nav-button:hover{
+    background-color: rgba(21, 137, 204, 0.8);
+    color: white;
+}
+
+.section-header{
+    color: rgba(21, 137, 204, 0.8);
+    background-color: white;
+    font-size: .9rem;
+    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 15%, 26% 15%, 15% 100%, 0 100%, 0 0);
+    clip-path: polygon(50% 0%, 100% 0, 100% 15%, 26% 15%, 15% 100%, 0 100%, 0 0);
+    padding-bottom: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    top: -1px;
+}
+
+.section-header h2{
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    margin: 0 0 0 1rem;
+}
+
+.novosti{
+    position: relative;
+    margin: 1.5rem 0 0 0;
+    height: 47vh;
+}
+
+.novosti-slider{
+    height: 15rem;
+}
+
+.novost{
+    background-image: linear-gradient(to right top, rgba(21, 137, 204, 0.8),rgba(21, 137, 204, 0.9));
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    border-left: 1px solid rgba(245, 245, 245, 0.466);
+    border-radius: 5px;
+    height: 100%;
+}
+
+.slider-for .novost{
+    background-image: linear-gradient(to right top, rgba(21, 137, 204, 0.3),rgba(21, 137, 204, 0.6)), url(../img/audience-auditorium-chairs-356065.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+.novost-text{
+    padding: 1rem;
+    line-height: 1.3rem;
+    font-style: italic;
+    text-align: center;
+}
+
+.novost-datum{
+    display: block;
+    text-align: right;
+    padding: .5rem 1rem;
+    color: rgba(245, 245, 245, 0.801);
+    font-size: .95rem;
+}
+
+.seminari{
+    position: relative;
+    height: 72vh;
+}
+
+.seminari-slider{
+    height: auto;
+}
+
+.slider-for{
+    margin-bottom: 1rem;
+}
+
+.footer{
+    height: 25vh;
+    width: 100%;
+    background-color: #333;
+}
+
+.novosti-slider, .slick-track,
+.seminari .slider-for  .slick-list.draggable{
+    height: 38vh;
+}
+
+.slider-for .slick-track,
+.seminari .slider-for  .slick-list.draggable{
+    height: 40vh;
+}
+
+.slider-nav .slick-track,
+.seminari .slider-nav  .slick-list.draggable{
+    height: 24vh;
+}
+
+.novosti .slick-track, .slick-list.draggable{
+    height: 38vh;
+}
+
+
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(2rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    80% {
+        transform: translateX(-2rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
